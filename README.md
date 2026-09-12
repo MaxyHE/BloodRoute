@@ -17,11 +17,26 @@
 
 ![官方测试结果与 VLM 调用比例](assets/test-results.svg)
 
-- **领域适配：** 4,000 张去重训练图像，458,752 个可训练 LoRA 参数；测试准确率提升 **36.16 个百分点**。
+- **领域适配：** 4,000 张按类别分层采样的训练图像，458,752 个可训练 LoRA 参数；测试准确率提升 **36.16 个百分点**。
 - **选择性复核：** 路由调用 VLM 452 次，相比全量 VLM 少 **86.79%**，准确率高 **1.64 个百分点**。
 - **净纠错：** 路由纠正冻结 CNN 分类器的 125 个错误、引入 34 个错误，净多答对 91 张。
 
 路由结果是对已保存预测的离线回放，调用比例不等同于端到端加速比。[实验记录](docs/EXPERIMENTS.md)提供完整对照，包括全量微调 CNN；[评估协议](docs/PROTOCOL.md)说明数据划分、选模和阈值选择。
+
+## 技术栈
+
+| 模块 | 技术与用途 |
+|---|---|
+| 多模态模型 | **Qwen3.5-4B · Hugging Face Transformers**：图文输入，生成八类细胞标签 |
+| 领域微调 | **PyTorch · PEFT / LoRA**：语言侧 q/v 投影，rank=4；冻结视觉编码器，答案及 EOS 监督 |
+| 训练配置 | **BF16 · AdamW**：2,000 → 4,000 图扩量续训，按开发集指标选择 checkpoint |
+| CNN 基线 | **torchvision · WideResNet-50-2**：ImageNet 预训练主干提取冻结特征 |
+| 线性分类器 | **scikit-learn**：StandardScaler + LogisticRegression，输出八类概率 |
+| 选择性路由 | **NumPy · 置信度阈值**：开发集选择门控策略，低置信度采用 VLM 预测；测试以离线回放验证 |
+| 数据处理 | **NumPy · Pillow · JSON**：NPZ 转 PNG、格式校验、类别均衡采样、图文指令构建及来源索引管理 |
+| 实验运行 | **Slurm · RTX 3090**：单 GPU 作业脚本；**Matplotlib** 生成结果图 |
+
+环境版本见 [requirements.txt](requirements.txt)，训练与推理命令见 [复现步骤](docs/REPRODUCE.md)。
 
 ## 方法
 
