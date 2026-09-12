@@ -1,0 +1,53 @@
+{
+  "dataset": "VisA fixed capsules/pcb1 binary test subset",
+  "images": 723,
+  "strata": {
+    "capsules": {
+      "normal": 241,
+      "anomaly": 40
+    },
+    "pcb1": {
+      "normal": 402,
+      "anomaly": 40
+    }
+  },
+  "protocol": "Paired external-domain check; results do not select a checkpoint. Not a full VisA evaluation.",
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 32,
+    "min_pixels": 65536,
+    "max_pixels": 200704
+  },
+  "base": {
+    "accuracy": 0.8962655601659751,
+    "balanced_accuracy": 0.53125,
+    "recall": 0.0625,
+    "fpr": 0.0,
+    "tp": 5,
+    "tn": 643,
+    "fp": 0,
+    "fn": 75,
+    "invalid": 0,
+    "bloodmnist_lexicon_raw_answer_count": 0
+  },
+  "step_03000": {
+    "accuracy": 0.9004149377593361,
+    "balanced_accuracy": 0.55,
+    "recall": 0.1,
+    "fpr": 0.0,
+    "tp": 8,
+    "tn": 643,
+    "fp": 0,
+    "fn": 72,
+    "invalid": 0,
+    "bloodmnist_lexicon_raw_answer_count": 0
+  },
+  "paired": {
+    "both_correct": 648,
+    "both_wrong": 72,
+    "corrected": 3,
+    "harmed": 0
+  },
+  "conclusion": "No degradation observed on this subset; low anomaly recall in both models limits evidence for broader capability retention."
+}
