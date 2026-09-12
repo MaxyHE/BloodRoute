@@ -1,0 +1,52 @@
+{
+  "dataset": "BloodMNIST official test",
+  "images": 3421,
+  "metrics": {
+    "base_qwen": {
+      "scope": "Measured end-to-end Qwen base-model test inference.",
+      "correct": 2002,
+      "accuracy": 0.5852090032154341,
+      "macro_f1": 0.5540295420530728,
+      "balanced_accuracy": 0.6326556085178959,
+      "invalid": 0
+    },
+    "qwen_lora_sft": {
+      "scope": "Measured end-to-end Qwen LoRA-SFT test inference using the development-selected step.",
+      "correct": 3239,
+      "accuracy": 0.9467991815258696,
+      "macro_f1": 0.9400960986545908,
+      "balanced_accuracy": 0.9433445818668889,
+      "invalid": 0
+    },
+    "wr50_linear": {
+      "scope": "Measured frozen WR50 feature-plus-linear-head test inference.",
+      "correct": 3204,
+      "accuracy": 0.9365682548962292,
+      "macro_f1": 0.9324544600412055,
+      "balanced_accuracy": 0.9367582278196809,
+      "invalid": 0
+    },
+    "development_frozen_routing": {
+      "scope": "Offline replay on saved test predictions of a policy selected on development predictions; not measured end-to-end routing latency.",
+      "score": "max_probability",
+      "rule": "score < 0.960442447942174",
+      "correct": 3295,
+      "accuracy": 0.9631686641332944,
+      "macro_f1": 0.9605384672394853,
+      "balanced_accuracy": 0.9633145182330177,
+      "qwen_calls": 452,
+      "qwen_call_rate": 0.13212510961707102,
+      "cnn_to_qwen_corrected": 125,
+      "cnn_to_qwen_harmed": 34,
+      "invalid": 0
+    },
+    "wr50_full_finetune": {
+      "scope": "Measured fully fine-tuned WR50 test inference using the development-selected checkpoint.",
+      "correct": 3355,
+      "accuracy": 0.9807073954983923,
+      "macro_f1": 0.9810550224951387,
+      "balanced_accuracy": 0.9836536281057116,
+      "invalid": 0
+    }
+  }
+}
