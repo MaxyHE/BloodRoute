@@ -26,6 +26,12 @@ Which blood cell type is shown? Answer with exactly one of: basophil; eosinophil
 
 参考实验在全部训练结束前固定新增 step_03000 做测试；训练完成后 dev 最优仍是它。公开脚本保留参考协议的 checkpoint 名称和冻结元数据。复现实验的选模必须在其测试前完成，不能根据测试结果更换 checkpoint。
 
+## 独立 rank 对照
+
+rank=2/4/8 的容量对照从同一 base 新建适配器，alpha 分别为 4/8/16，固定 alpha/r=2。三组保持同样的语言侧作用层、dropout、数据、seed 与生成设置，完整训练 8,000 步；前 4,000 步 lr=2e-4，后 4,000 步 lr=5e-5，学习率切换时保留 AdamW 状态。
+
+每 1,000 步在同一 400 图开发集评估，按 macro-F1、accuracy、较早 step 选择 checkpoint。本轮不读取测试集；它是独立的容量实验，主实验仍采用上一节所述热启动适配器。完整记录见 [Rank 消融](RANK_ABLATION.md)。
+
 ## VLM 评估
 
 原始模型和适配器均使用同样的处理器、RGB 图像、最小像素 65,536、最大像素 448²、seed=42；thinking=false、greedy、max_new_tokens=32。只有规范八类标签可被解析为有效输出，其余计 invalid 且计错。

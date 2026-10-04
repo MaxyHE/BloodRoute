@@ -1,0 +1,57 @@
+{
+  "dataset": "BloodMNIST class-balanced development subset",
+  "images": 400,
+  "train_images": 4000,
+  "scope": "Independent from-base LoRA rank study. Development-only checkpoint selection; no test evaluation. Separate from the warm-start main adapter.",
+  "protocol": {
+    "base_model": "Qwen3.5-4B",
+    "initialization": "fresh LoRA on the same base; no historical adapter",
+    "seed": 42,
+    "target_layers": [3, 7, 11, 15, 19, 23, 27, 31],
+    "target_modules": ["q_proj", "v_proj"],
+    "alpha_over_rank": 2,
+    "dropout": 0.05,
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_norm_clip": 1.0,
+    "training_steps": 8000,
+    "learning_rate_schedule": [
+      {"first_step": 1, "last_step": 4000, "learning_rate": 0.0002},
+      {"first_step": 4001, "last_step": 8000, "learning_rate": 0.00005}
+    ],
+    "optimizer_state_preserved_at_lr_switch": true,
+    "evaluation_interval_steps": 1000,
+    "selection_order": ["macro_f1 descending", "accuracy descending", "step ascending"],
+    "rgb": true,
+    "min_pixels": 65536,
+    "max_pixels": 200704,
+    "enable_thinking": false,
+    "do_sample": false,
+    "max_new_tokens": 32,
+    "test_read": false
+  },
+  "confusion_labels_rows": ["basophil", "eosinophil", "erythroblast", "immature_granulocytes", "lymphocyte", "monocyte", "neutrophil", "platelet"],
+  "confusion_labels_columns": ["basophil", "eosinophil", "erythroblast", "immature_granulocytes", "lymphocyte", "monocyte", "neutrophil", "platelet", "__invalid__"],
+  "runs": [
+    {
+      "rank": 2, "alpha": 4, "trainable_parameters": 229376,
+      "completed_steps": 8000, "best_step": 8000,
+      "correct": 388, "accuracy": 0.97, "macro_f1": 0.9697078230433183, "invalid": 0,
+      "confusion_8x9": [[49,0,0,0,1,0,0,0,0],[0,50,0,0,0,0,0,0,0],[0,0,47,0,2,1,0,0,0],[3,0,0,43,1,3,0,0,0],[0,0,0,0,50,0,0,0,0],[0,0,0,0,0,50,0,0,0],[0,1,0,0,0,0,49,0,0],[0,0,0,0,0,0,0,50,0]]
+    },
+    {
+      "rank": 4, "alpha": 8, "trainable_parameters": 458752,
+      "completed_steps": 8000, "best_step": 5000,
+      "correct": 388, "accuracy": 0.97, "macro_f1": 0.9701401584464324, "invalid": 0,
+      "confusion_8x9": [[49,0,0,1,0,0,0,0,0],[0,50,0,0,0,0,0,0,0],[0,0,49,0,0,1,0,0,0],[3,0,1,46,0,0,0,0,0],[0,0,1,1,48,0,0,0,0],[0,0,0,2,0,48,0,0,0],[0,0,0,0,0,0,50,0,0],[0,0,2,0,0,0,0,48,0]]
+    },
+    {
+      "rank": 8, "alpha": 16, "trainable_parameters": 917504,
+      "completed_steps": 8000, "best_step": 8000,
+      "correct": 387, "accuracy": 0.9675, "macro_f1": 0.9668213877018267, "invalid": 0,
+      "confusion_8x9": [[49,1,0,0,0,0,0,0,0],[0,50,0,0,0,0,0,0,0],[0,0,46,1,1,0,1,1,0],[3,0,0,42,1,4,0,0,0],[0,0,0,0,50,0,0,0,0],[0,0,0,0,0,50,0,0,0],[0,0,0,0,0,0,50,0,0],[0,0,0,0,0,0,0,50,0]]
+    }
+  ]
+}

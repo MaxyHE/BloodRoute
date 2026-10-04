@@ -52,30 +52,42 @@ ax.text(.1,.52,'Policy selected on development predictions; evaluated by offline
 ax.text(.1,.15,'Each branch returns one of 8 cell classes. Routing call rate does not establish end-to-end speedup.',color=GRAY,fontsize=10.5)
 save(fig,'method-overview')
 
-keys=['base_qwen','qwen_lora_sft','wr50_linear','development_frozen_routing']
-labels=['Qwen base','Qwen + LoRA','Frozen WR50\n+ linear head','CNN–VLM routing\n(offline replay)']
-fig, (ax, ax2) = plt.subplots(1,2,figsize=(13,5.5),gridspec_kw={'width_ratios':[2.3,1]})
-fig.subplots_adjust(top=.76,bottom=.24,wspace=.26)
-fig.text(.06,.94,'Domain adaptation gain, with selective VLM calls',fontsize=20,weight='bold',color=NAVY)
-fig.text(.06,.88,'BloodMNIST official test · n = 3,421 · development-selected checkpoint and routing policy',fontsize=11,color=GRAY)
-x=np.arange(4); width=.34
-for offset, metric, color, label in [(-width/2,'accuracy',BLUE,'Accuracy'),(width/2,'macro_f1',TEAL,'Macro-F1')]:
+keys=['base_qwen','qwen_lora_sft','wr50_linear',
+      'development_frozen_routing','wr50_full_finetune']
+labels=['Qwen base','Qwen + LoRA','Frozen WR50\n+ linear head',
+        'CNN–VLM routing\n(offline replay)','Fully fine-tuned\nWR50']
+fig = plt.figure(figsize=(14,7.2))
+ax = fig.add_axes([.23,.25,.45,.48])
+ax2 = fig.add_axes([.76,.25,.20,.48])
+fig.text(.04,.94,'Five-way comparison: classification & VLM calls',fontsize=21,weight='bold',color=NAVY)
+fig.text(.04,.885,'BloodMNIST official test · n = 3,421 · trained models and routing policy selected on development data',fontsize=11,color=GRAY)
+y=np.arange(len(keys)); height=.25
+for offset, metric, color, label in [(-height/2,'accuracy',BLUE,'Accuracy'),(height/2,'macro_f1',TEAL,'Macro-F1')]:
     vals=[100*M[k][metric] for k in keys]
-    bars=ax.bar(x+offset,vals,width,color=color,label=label)
-    ax.bar_label(bars,labels=[f'{v:.2f}' for v in vals],padding=4,fontsize=9)
-ax.set_xticks(x,labels,fontsize=10); ax.set_ylim(0,110); ax.set_yticks(range(0,101,20)); ax.set_ylabel('Score (%)',color=GRAY)
-ax.legend(loc='upper left',bbox_to_anchor=(0,1.16),ncol=2,frameon=False,fontsize=10)
-rates=[100,100,0,100*M['development_frozen_routing']['qwen_call_rate']]
-bars=ax2.barh(np.arange(4),rates,color=[BLUE,TEAL,GRAY,TEAL],height=.55)
-ax2.set_yticks(np.arange(4),['Base','LoRA','CNN','Routing'],fontsize=10); ax2.invert_yaxis(); ax2.set_xlim(0,122)
+    bars=ax.barh(y+offset,vals,height,color=color,label=label)
+    ax.bar_label(bars,labels=[f'{v:.2f}' for v in vals],padding=4,fontsize=10)
+ax.set_yticks(y,labels,fontsize=12)
+ax.set_ylim(len(keys)-.5,-.5)
+ax.set_xlim(0,113); ax.set_xticks(range(0,101,20))
+ax.set_xlabel('Classification score (%)',color=GRAY)
+ax.legend(loc='lower left',bbox_to_anchor=(0,1.04),ncol=2,frameon=False,fontsize=11)
+rates=[100,100,0,100*M['development_frozen_routing']['qwen_call_rate'],0]
+bars=ax2.barh(y,rates,color=[GRAY,GRAY,GRAY,TEAL,GRAY],height=.5)
+ax2.set_ylim(len(keys)-.5,-.5)
+ax2.set_yticks(y,[]); ax2.set_xlim(0,125)
 ax2.set_xticks([0,50,100]); ax2.set_xlabel('VLM call rate (%)',color=GRAY)
-ax2.bar_label(bars,labels=[f'{v:.2f}%' for v in rates],padding=4,fontsize=10)
+ax2.set_title('Selective invocation',fontsize=11,color=NAVY,pad=20)
+ax2.bar_label(bars,labels=[f'{v:.2f}%' for v in rates],padding=4,fontsize=11)
 for a in (ax,ax2):
     a.spines[['top','right']].set_visible(False)
     a.spines[['left','bottom']].set_color('#d2dae4')
     a.tick_params(colors=GRAY,length=0,pad=7)
     a.set_axisbelow(True)
-ax.yaxis.grid(True,color='#e9edf2')
-fig.text(.06,.105,'SFT: +36.16 pp accuracy vs. base     |     Routing: 452 / 3,421 VLM calls',color=NAVY,weight='bold',fontsize=11)
-fig.text(.06,.048,'Routing is offline replay; call rate is not measured latency reduction. Full CNN fine-tuning results: docs/EXPERIMENTS.md.',color=GRAY,fontsize=9.5)
+    a.xaxis.grid(True,color='#e9edf2')
+gain=100*(M['qwen_lora_sft']['accuracy']-M['base_qwen']['accuracy'])
+calls=M['development_frozen_routing']['qwen_calls']
+n=json.loads((ROOT / 'results/metrics.json').read_text())['images']
+fig.text(.04,.13,f'LoRA: +{gain:.2f} pp accuracy vs. base     |     Routing: {calls:,} / {n:,} VLM calls',color=NAVY,weight='bold',fontsize=12)
+fig.text(.04,.078,'Fully fine-tuned CNN is the strongest classifier in this experiment.',color=GRAY,fontsize=11)
+fig.text(.04,.035,'Routing is offline prediction replay; VLM call rate does not measure end-to-end latency reduction.',color=GRAY,fontsize=10.5)
 save(fig,'test-results')
