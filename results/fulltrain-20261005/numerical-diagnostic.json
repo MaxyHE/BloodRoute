@@ -1,0 +1,72 @@
+{
+  "initial_flags": {
+    "cudnn_tf32": true,
+    "matmul_tf32": false
+  },
+  "comparisons": [
+    {
+      "source_id": "bloodmnist:test:01128",
+      "cudnn_tf32": true,
+      "batch": 1,
+      "confidence": 0.5971984823212585,
+      "saved_confidence": 0.5935409885900079,
+      "difference": 0.0036574937312505718
+    },
+    {
+      "source_id": "bloodmnist:test:01128",
+      "cudnn_tf32": true,
+      "batch": 64,
+      "confidence": 0.5935409885900079,
+      "saved_confidence": 0.5935409885900079,
+      "difference": 0.0
+    },
+    {
+      "source_id": "bloodmnist:test:01128",
+      "cudnn_tf32": false,
+      "batch": 1,
+      "confidence": 0.5966278387689588,
+      "saved_confidence": 0.5935409885900079,
+      "difference": 0.0030868501789508285
+    },
+    {
+      "source_id": "bloodmnist:test:01128",
+      "cudnn_tf32": false,
+      "batch": 64,
+      "confidence": 0.5966255572071856,
+      "saved_confidence": 0.5935409885900079,
+      "difference": 0.003084568617177652
+    },
+    {
+      "source_id": "bloodmnist:test:02649",
+      "cudnn_tf32": true,
+      "batch": 1,
+      "confidence": 0.9949849859137913,
+      "saved_confidence": 0.9950150268721436,
+      "difference": -3.0040958352350877e-05
+    },
+    {
+      "source_id": "bloodmnist:test:02649",
+      "cudnn_tf32": true,
+      "batch": 64,
+      "confidence": 0.9950150268721436,
+      "saved_confidence": 0.9950150268721436,
+      "difference": 0.0
+    },
+    {
+      "source_id": "bloodmnist:test:02649",
+      "cudnn_tf32": false,
+      "batch": 1,
+      "confidence": 0.9949458670529168,
+      "saved_confidence": 0.9950150268721436,
+      "difference": -6.915981922683834e-05
+    },
+    {
+      "source_id": "bloodmnist:test:02649",
+      "cudnn_tf32": false,
+      "batch": 64,
+      "confidence": 0.9949458013437904,
+      "saved_confidence": 0.9950150268721436,
+      "difference": -6.922552835320062e-05
+    }
+  ]
+}

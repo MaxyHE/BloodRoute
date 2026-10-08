@@ -1,0 +1,180 @@
+{
+  "main_recommendation": {
+    "score": "max_probability",
+    "budget_upper_bound": 0.3,
+    "rule": "score < threshold",
+    "images": 400,
+    "correct": 394,
+    "invalid": 0,
+    "accuracy": 0.985,
+    "macro_f1": 0.984889656398983,
+    "balanced_accuracy": 0.985,
+    "confusion_rows": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "confusion_columns": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "invalid"
+    ],
+    "confusion_8_plus_invalid": [
+      [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        46,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "precision": 0.9803921568627451,
+        "recall": 1.0,
+        "f1": 0.99009900990099,
+        "support": 50
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.96,
+        "f1": 0.9795918367346939,
+        "support": 50
+      },
+      "3": {
+        "precision": 0.9787234042553191,
+        "recall": 0.92,
+        "f1": 0.9484536082474226,
+        "support": 50
+      },
+      "4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "5": {
+        "precision": 0.9803921568627451,
+        "recall": 1.0,
+        "f1": 0.99009900990099,
+        "support": 50
+      },
+      "6": {
+        "precision": 0.9433962264150944,
+        "recall": 1.0,
+        "f1": 0.970873786407767,
+        "support": 50
+      },
+      "7": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      }
+    },
+    "threshold": 0.9950015136477659,
+    "calls": 83,
+    "call_rate": 0.2075,
+    "cnn_to_qwen_corrected": 15,
+    "cnn_to_qwen_harmed": 0
+  },
+  "selection": "Fixed dev, max class probability, strict score < threshold; budget<=30%; threshold fixed before test."
+}

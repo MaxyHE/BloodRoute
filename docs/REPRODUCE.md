@@ -1,4 +1,6 @@
-# 复现步骤
+# 历史 4,000 图实验复现
+
+最新 11,959 图训练与真实串行测速见[完整训练集复现](FULLTRAIN_REPRODUCE.md)。本页保留旧热启动模型、旧阈值与原对照的命令。
 
 以下命令从仓库根目录执行，所有模型、数据和输出路径由使用者提供。参考环境为 Python 3.10、PyTorch 2.4.0+cu121、Torchvision 0.19.0、Transformers 5.5.4，单张 RTX 3090。具体依赖见根目录 requirements.txt；PyTorch 的 CUDA wheel 按本机驱动选择。
 

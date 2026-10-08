@@ -1,0 +1,469 @@
+{
+  "alpha": 8,
+  "alpha_over_rank": 2.0,
+  "base_model": "Qwen3.5-4B",
+  "best_checkpoint": {
+    "accuracy": 0.99,
+    "candidate": "step_18000",
+    "checkpoint": "step_18000",
+    "confusion_8x9": [
+      [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0
+      ]
+    ],
+    "confusion_labels_columns": [
+      "basophil",
+      "eosinophil",
+      "erythroblast",
+      "immature_granulocytes",
+      "lymphocyte",
+      "monocyte",
+      "neutrophil",
+      "platelet",
+      "__invalid__"
+    ],
+    "global_step": 18000,
+    "invalid": 0,
+    "macro_f1": 0.9899482295168293,
+    "n": 400,
+    "per_class_f1": [
+      0.9900990099009901,
+      1.0,
+      0.9795918367346939,
+      0.9696969696969697,
+      0.9900990099009901,
+      1.0,
+      0.9900990099009901,
+      1.0
+    ],
+    "source": "from_scratch_full_data"
+  },
+  "completed_steps": 23918,
+  "data": {
+    "dev_per_class": 50,
+    "dev_records": 400,
+    "test_policy": "No test manifest, image, label, or checkpoint is accepted or read.",
+    "train_per_class": {
+      "0": 852,
+      "1": 2181,
+      "2": 1085,
+      "3": 2026,
+      "4": 849,
+      "5": 993,
+      "6": 2330,
+      "7": 1643
+    },
+    "train_records": 11959
+  },
+  "dev_json": "bloodmnist_dev_50_per_class_manifest.json",
+  "dev_json_sha256": "726c2147700c97a84234fda7ba2dfb12c4f24dc560aedcce3601b12371fe4879",
+  "elapsed_seconds": 25493.163601853885,
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 32,
+    "prompt": "Which blood cell type is shown? Answer with exactly one of: basophil; eosinophil; erythroblast; immature_granulocytes; lymphocyte; monocyte; neutrophil; platelet."
+  },
+  "gpu_at_end": "NVIDIA GeForce RTX 3090, 550.127.05, 24576 MiB",
+  "gpu_at_start": "NVIDIA GeForce RTX 3090, 550.127.05, 24576 MiB",
+  "image_root": "bloodmnist_fulltrain_20261004",
+  "initialization": "Fresh LoRA on the base Qwen3.5-4B checkpoint; no hot-start adapter.",
+  "lora": {
+    "alpha": 8,
+    "dropout": 0.05,
+    "full_attention_layers": [
+      3,
+      7,
+      11,
+      15,
+      19,
+      23,
+      27,
+      31
+    ],
+    "rank": 4,
+    "shape_expected_parameter_count": 458752,
+    "target_modules": [
+      "model.language_model.layers.3.self_attn.q_proj",
+      "model.language_model.layers.3.self_attn.v_proj",
+      "model.language_model.layers.7.self_attn.q_proj",
+      "model.language_model.layers.7.self_attn.v_proj",
+      "model.language_model.layers.11.self_attn.q_proj",
+      "model.language_model.layers.11.self_attn.v_proj",
+      "model.language_model.layers.15.self_attn.q_proj",
+      "model.language_model.layers.15.self_attn.v_proj",
+      "model.language_model.layers.19.self_attn.q_proj",
+      "model.language_model.layers.19.self_attn.v_proj",
+      "model.language_model.layers.23.self_attn.q_proj",
+      "model.language_model.layers.23.self_attn.v_proj",
+      "model.language_model.layers.27.self_attn.q_proj",
+      "model.language_model.layers.27.self_attn.v_proj",
+      "model.language_model.layers.31.self_attn.q_proj",
+      "model.language_model.layers.31.self_attn.v_proj"
+    ],
+    "trainable_parameter_count": 458752,
+    "trainable_parameters": [
+      {
+        "name": "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.31.self_attn.q_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.31.self_attn.q_proj.lora_B.default.weight",
+        "numel": 32768,
+        "shape": [
+          8192,
+          4
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.31.self_attn.v_proj.lora_A.default.weight",
+        "numel": 10240,
+        "shape": [
+          4,
+          2560
+        ]
+      },
+      {
+        "name": "base_model.model.model.language_model.layers.31.self_attn.v_proj.lora_B.default.weight",
+        "numel": 4096,
+        "shape": [
+          1024,
+          4
+        ]
+      }
+    ]
+  },
+  "optimizer": {
+    "batch_size": 1,
+    "bf16": true,
+    "clip_grad_norm": 1.0,
+    "eval_interval_steps": 3000,
+    "lr_first_epoch": 0.0002,
+    "lr_second_epoch": 5e-05,
+    "name": "AdamW",
+    "optimizer_state": "retained across planned learning-rate change",
+    "total_steps": 23918,
+    "weight_decay": 0.01
+  },
+  "peak_cuda_memory_allocated_bytes": 11869463552,
+  "peak_cuda_memory_reserved_bytes": 12572426240,
+  "protocol": "bloodmnist_fulltrain_v1_from_scratch",
+  "rank": 4,
+  "seed": 42,
+  "selection": "Highest dev macro-F1, then dev accuracy, then earlier step. Test is not read.",
+  "train_json": "bloodmnist_train_manifest.json",
+  "train_json_sha256": "54d66a7736653d1b1ed7ee98cb9c8688ec4945673c2bd0aa9e075a26c1e64a8a"
+}

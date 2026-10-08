@@ -1,0 +1,233 @@
+{
+  "mode": "cnn",
+  "protocol": {
+    "batch_size": 1,
+    "concurrency": 1,
+    "prefetch": false,
+    "threshold": 0.9950015136477659,
+    "warmup_images": 5,
+    "warmup_route_forces_vlm": true,
+    "timing": "synchronized wall clock from disk image read through final prediction; excludes model loading, warmup and JSONL writes",
+    "order": "source_id sorted",
+    "generation": {
+      "max_new_tokens": 32,
+      "do_sample": false,
+      "enable_thinking": false,
+      "use_cache": false,
+      "min_pixels": 65536,
+      "max_pixels": 200704
+    }
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.4.0+cu121",
+    "torchvision": "0.19.0+cu121",
+    "sklearn": "1.3.2"
+  },
+  "model_loading": {
+    "cnn_seconds": 2.883517999202013,
+    "vlm_seconds": 6.477907299995422e-05
+  },
+  "warmup_seconds": 2.6851406269706786,
+  "metrics": {
+    "images": 3421,
+    "correct": 3204,
+    "invalid": 0,
+    "accuracy": 0.9365682548962292,
+    "macro_f1": 0.9324544600412055,
+    "balanced_accuracy": 0.9367582278196809,
+    "confusion_columns": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "invalid"
+    ],
+    "confusion_rows": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "confusion_8_plus_invalid": [
+      [
+        230,
+        0,
+        0,
+        7,
+        4,
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        604,
+        2,
+        7,
+        1,
+        2,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        295,
+        8,
+        5,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        20,
+        6,
+        3,
+        496,
+        2,
+        32,
+        20,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        8,
+        1,
+        227,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        3,
+        0,
+        14,
+        6,
+        258,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        5,
+        26,
+        1,
+        3,
+        626,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        468,
+        0
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "label_name": "basophil",
+        "precision": 0.8949416342412452,
+        "recall": 0.9426229508196722,
+        "f1": 0.9181636726546906,
+        "support": 244
+      },
+      "1": {
+        "label_name": "eosinophil",
+        "precision": 0.9741935483870968,
+        "recall": 0.967948717948718,
+        "f1": 0.9710610932475885,
+        "support": 624
+      },
+      "2": {
+        "label_name": "erythroblast",
+        "precision": 0.9394904458598726,
+        "recall": 0.9485530546623794,
+        "f1": 0.944,
+        "support": 311
+      },
+      "3": {
+        "label_name": "immature_granulocytes",
+        "precision": 0.8872987477638641,
+        "recall": 0.8566493955094991,
+        "f1": 0.8717047451669596,
+        "support": 579
+      },
+      "4": {
+        "label_name": "lymphocyte",
+        "precision": 0.9227642276422764,
+        "recall": 0.934156378600823,
+        "f1": 0.9284253578732107,
+        "support": 243
+      },
+      "5": {
+        "label_name": "monocyte",
+        "precision": 0.8571428571428571,
+        "recall": 0.9084507042253521,
+        "f1": 0.882051282051282,
+        "support": 284
+      },
+      "6": {
+        "label_name": "neutrophil",
+        "precision": 0.9571865443425076,
+        "recall": 0.93993993993994,
+        "f1": 0.9484848484848485,
+        "support": 666
+      },
+      "7": {
+        "label_name": "platelet",
+        "precision": 0.9957446808510638,
+        "recall": 0.9957446808510638,
+        "f1": 0.9957446808510638,
+        "support": 470
+      }
+    }
+  },
+  "calls": 0,
+  "latency": {
+    "mean_ms": 10.607829850626572,
+    "p95_ms": 16.565342899411917,
+    "timed_throughput_images_s": 94.26998868585105,
+    "loop_wall_seconds": 36.49048550706357,
+    "loop_throughput_images_s": 93.75046542852348
+  },
+  "resources": {
+    "peak_cuda_allocated_bytes": 311989760,
+    "peak_cuda_reserved_bytes": 346030080,
+    "process_peak_rss_kib": 851020
+  },
+  "parity": {
+    "difference_count": 0,
+    "cnn_max_probability_difference": 0.0036574937312505718
+  },
+  "provenance": {
+    "benchmark_live.py": "f92fd356b50cdeafa86d2f8380e5773c93e528a7094289e9fb299ff721f2cea4",
+    "bloodmnist_test_manifest.json": "e43cf8e9408572dcd13dbce9a0fe9cd463f9e78854c3bbe9a67b8a3fadc016fe",
+    "linear_probe.npz": "940e8690e8aec37fad05b1755582075a3d641175e3fe8f40c02f3cbc65ccf497",
+    "test_predictions.jsonl": "2153badf267713d1c9fe213644938ac64cc092db72798f167962ccf6994f74bd",
+    "adapter_model.safetensors": "1ca0eee0bee45813a3f1e2d78ca9d3f6346d8d85c8949e8b04a3f0a16737f4d6"
+  }
+}

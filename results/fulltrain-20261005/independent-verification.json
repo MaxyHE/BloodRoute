@@ -1,0 +1,37 @@
+{
+  "cnn": {
+    "images": 3421,
+    "correct": 3204,
+    "accuracy": 0.9365682548962292,
+    "macro_f1": 0.9324544600412055,
+    "calls": 0,
+    "mean_ms": 10.607829850626572,
+    "p95_ms": 16.565342899411917
+  },
+  "route": {
+    "images": 3421,
+    "correct": 3335,
+    "accuracy": 0.9748611517100263,
+    "macro_f1": 0.9748881241975101,
+    "calls": 801,
+    "mean_ms": 139.040853637762,
+    "p95_ms": 651.8003311939538
+  },
+  "vlm": {
+    "images": 3421,
+    "correct": 3325,
+    "accuracy": 0.9719380298158433,
+    "macro_f1": 0.970117533458081,
+    "calls": 3421,
+    "mean_ms": 533.0897108876293,
+    "p95_ms": 662.7248441800475
+  },
+  "route_changes": {
+    "corrected": 164,
+    "harmed": 33,
+    "net_corrected": 131,
+    "call_rate": 0.2341420637240573,
+    "mean_latency_reduction_vs_vlm": 0.7391792585787298
+  },
+  "verification": "Recomputed from all three saved live prediction files; identical test ids and labels; agrees with archived reports."
+}

@@ -1,6 +1,10 @@
 {
-  "dataset": "BloodMNIST official test",
+  "experiment": "bloodmnist_fulltrain_and_live_serial_v1",
+  "experiment_date": "2026-10-05",
   "images": 3421,
+  "train_images_vlm": 11959,
+  "train_images_cnn": 4000,
+  "dev_images": 400,
   "metrics": {
     "base_qwen": {
       "scope": "Measured end-to-end Qwen base-model test inference.",
@@ -11,34 +15,537 @@
       "invalid": 0
     },
     "qwen_lora_sft": {
-      "scope": "Measured end-to-end Qwen LoRA-SFT test inference using the development-selected step.",
-      "correct": 3239,
-      "accuracy": 0.9467991815258696,
-      "macro_f1": 0.9400960986545908,
-      "balanced_accuracy": 0.9433445818668889,
-      "invalid": 0
+      "images": 3421,
+      "correct": 3325,
+      "invalid": 0,
+      "accuracy": 0.9719380298158433,
+      "macro_f1": 0.970117533458081,
+      "balanced_accuracy": 0.9684640355271599,
+      "confusion_columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "invalid"
+      ],
+      "confusion_rows": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "confusion_8_plus_invalid": [
+        [
+          231,
+          0,
+          0,
+          10,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          624,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          301,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          2,
+          555,
+          0,
+          7,
+          12,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          235,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          5,
+          269,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          1,
+          16,
+          1,
+          1,
+          641,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "per_class": {
+        "0": {
+          "label_name": "basophil",
+          "precision": 0.9705882352941176,
+          "recall": 0.9467213114754098,
+          "f1": 0.9585062240663901,
+          "support": 244
+        },
+        "1": {
+          "label_name": "eosinophil",
+          "precision": 0.9904761904761905,
+          "recall": 1.0,
+          "f1": 0.9952153110047847,
+          "support": 624
+        },
+        "2": {
+          "label_name": "erythroblast",
+          "precision": 0.9868852459016394,
+          "recall": 0.9678456591639871,
+          "f1": 0.9772727272727273,
+          "support": 311
+        },
+        "3": {
+          "label_name": "immature_granulocytes",
+          "precision": 0.9265442404006677,
+          "recall": 0.9585492227979274,
+          "f1": 0.9422750424448217,
+          "support": 579
+        },
+        "4": {
+          "label_name": "lymphocyte",
+          "precision": 0.9631147540983607,
+          "recall": 0.9670781893004116,
+          "f1": 0.9650924024640657,
+          "support": 243
+        },
+        "5": {
+          "label_name": "monocyte",
+          "precision": 0.9607142857142857,
+          "recall": 0.9471830985915493,
+          "f1": 0.9539007092198581,
+          "support": 284
+        },
+        "6": {
+          "label_name": "neutrophil",
+          "precision": 0.9771341463414634,
+          "recall": 0.9624624624624625,
+          "f1": 0.9697428139183056,
+          "support": 666
+        },
+        "7": {
+          "label_name": "platelet",
+          "precision": 1.0,
+          "recall": 0.997872340425532,
+          "f1": 0.9989350372736955,
+          "support": 470
+        }
+      }
     },
     "wr50_linear": {
-      "scope": "Measured frozen WR50 feature-plus-linear-head test inference.",
+      "images": 3421,
       "correct": 3204,
+      "invalid": 0,
       "accuracy": 0.9365682548962292,
       "macro_f1": 0.9324544600412055,
       "balanced_accuracy": 0.9367582278196809,
-      "invalid": 0
+      "confusion_columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "invalid"
+      ],
+      "confusion_rows": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "confusion_8_plus_invalid": [
+        [
+          230,
+          0,
+          0,
+          7,
+          4,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          604,
+          2,
+          7,
+          1,
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          295,
+          8,
+          5,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          20,
+          6,
+          3,
+          496,
+          2,
+          32,
+          20,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          8,
+          1,
+          227,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          14,
+          6,
+          258,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          5,
+          26,
+          1,
+          3,
+          626,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          468,
+          0
+        ]
+      ],
+      "per_class": {
+        "0": {
+          "label_name": "basophil",
+          "precision": 0.8949416342412452,
+          "recall": 0.9426229508196722,
+          "f1": 0.9181636726546906,
+          "support": 244
+        },
+        "1": {
+          "label_name": "eosinophil",
+          "precision": 0.9741935483870968,
+          "recall": 0.967948717948718,
+          "f1": 0.9710610932475885,
+          "support": 624
+        },
+        "2": {
+          "label_name": "erythroblast",
+          "precision": 0.9394904458598726,
+          "recall": 0.9485530546623794,
+          "f1": 0.944,
+          "support": 311
+        },
+        "3": {
+          "label_name": "immature_granulocytes",
+          "precision": 0.8872987477638641,
+          "recall": 0.8566493955094991,
+          "f1": 0.8717047451669596,
+          "support": 579
+        },
+        "4": {
+          "label_name": "lymphocyte",
+          "precision": 0.9227642276422764,
+          "recall": 0.934156378600823,
+          "f1": 0.9284253578732107,
+          "support": 243
+        },
+        "5": {
+          "label_name": "monocyte",
+          "precision": 0.8571428571428571,
+          "recall": 0.9084507042253521,
+          "f1": 0.882051282051282,
+          "support": 284
+        },
+        "6": {
+          "label_name": "neutrophil",
+          "precision": 0.9571865443425076,
+          "recall": 0.93993993993994,
+          "f1": 0.9484848484848485,
+          "support": 666
+        },
+        "7": {
+          "label_name": "platelet",
+          "precision": 0.9957446808510638,
+          "recall": 0.9957446808510638,
+          "f1": 0.9957446808510638,
+          "support": 470
+        }
+      }
     },
     "development_frozen_routing": {
-      "scope": "Offline replay on saved test predictions of a policy selected on development predictions; not measured end-to-end routing latency.",
-      "score": "max_probability",
-      "rule": "score < 0.960442447942174",
-      "correct": 3295,
-      "accuracy": 0.9631686641332944,
-      "macro_f1": 0.9605384672394853,
-      "balanced_accuracy": 0.9633145182330177,
-      "qwen_calls": 452,
-      "qwen_call_rate": 0.13212510961707102,
-      "cnn_to_qwen_corrected": 125,
-      "cnn_to_qwen_harmed": 34,
-      "invalid": 0
+      "images": 3421,
+      "correct": 3335,
+      "invalid": 0,
+      "accuracy": 0.9748611517100263,
+      "macro_f1": 0.9748881241975101,
+      "balanced_accuracy": 0.9739686297426491,
+      "confusion_columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "invalid"
+      ],
+      "confusion_rows": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "confusion_8_plus_invalid": [
+        [
+          237,
+          0,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          624,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          302,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          548,
+          0,
+          8,
+          18,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          2,
+          237,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          3,
+          273,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          16,
+          1,
+          1,
+          645,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "per_class": {
+        "0": {
+          "label_name": "basophil",
+          "precision": 0.983402489626556,
+          "recall": 0.9713114754098361,
+          "f1": 0.9773195876288661,
+          "support": 244
+        },
+        "1": {
+          "label_name": "eosinophil",
+          "precision": 0.9952153110047847,
+          "recall": 1.0,
+          "f1": 0.9976019184652278,
+          "support": 624
+        },
+        "2": {
+          "label_name": "erythroblast",
+          "precision": 0.9869281045751634,
+          "recall": 0.9710610932475884,
+          "f1": 0.978930307941653,
+          "support": 311
+        },
+        "3": {
+          "label_name": "immature_granulocytes",
+          "precision": 0.9367521367521368,
+          "recall": 0.9464594127806563,
+          "f1": 0.9415807560137457,
+          "support": 579
+        },
+        "4": {
+          "label_name": "lymphocyte",
+          "precision": 0.9713114754098361,
+          "recall": 0.9753086419753086,
+          "f1": 0.973305954825462,
+          "support": 243
+        },
+        "5": {
+          "label_name": "monocyte",
+          "precision": 0.9646643109540636,
+          "recall": 0.9612676056338029,
+          "f1": 0.962962962962963,
+          "support": 284
+        },
+        "6": {
+          "label_name": "neutrophil",
+          "precision": 0.9684684684684685,
+          "recall": 0.9684684684684685,
+          "f1": 0.9684684684684683,
+          "support": 666
+        },
+        "7": {
+          "label_name": "platelet",
+          "precision": 1.0,
+          "recall": 0.997872340425532,
+          "f1": 0.9989350372736955,
+          "support": 470
+        }
+      },
+      "qwen_calls": 801,
+      "qwen_call_rate": 0.2341420637240573
     },
     "wr50_full_finetune": {
       "scope": "Measured fully fine-tuned WR50 test inference using the development-selected checkpoint.",
@@ -48,5 +555,212 @@
       "balanced_accuracy": 0.9836536281057116,
       "invalid": 0
     }
-  }
+  },
+  "latency": {
+    "cnn": {
+      "mean_ms": 10.607829850626572,
+      "p95_ms": 16.565342899411917,
+      "timed_throughput_images_s": 94.26998868585105,
+      "loop_wall_seconds": 36.49048550706357,
+      "loop_throughput_images_s": 93.75046542852348
+    },
+    "route": {
+      "mean_ms": 139.040853637762,
+      "p95_ms": 651.8003311939538,
+      "timed_throughput_images_s": 7.192130757520109,
+      "loop_wall_seconds": 475.954175402876,
+      "loop_throughput_images_s": 7.187666747758357
+    },
+    "vlm": {
+      "mean_ms": 533.0897108876293,
+      "p95_ms": 662.7248441800475,
+      "timed_throughput_images_s": 1.8758568765751162,
+      "loop_wall_seconds": 1824.088074205909,
+      "loop_throughput_images_s": 1.8754576867069779
+    }
+  },
+  "routing": {
+    "score": "max_probability",
+    "budget_upper_bound": 0.3,
+    "rule": "score < threshold",
+    "images": 400,
+    "correct": 394,
+    "invalid": 0,
+    "accuracy": 0.985,
+    "macro_f1": 0.984889656398983,
+    "balanced_accuracy": 0.985,
+    "confusion_rows": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "confusion_columns": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "invalid"
+    ],
+    "confusion_8_plus_invalid": [
+      [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        46,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "precision": 0.9803921568627451,
+        "recall": 1.0,
+        "f1": 0.99009900990099,
+        "support": 50
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.96,
+        "f1": 0.9795918367346939,
+        "support": 50
+      },
+      "3": {
+        "precision": 0.9787234042553191,
+        "recall": 0.92,
+        "f1": 0.9484536082474226,
+        "support": 50
+      },
+      "4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "5": {
+        "precision": 0.9803921568627451,
+        "recall": 1.0,
+        "f1": 0.99009900990099,
+        "support": 50
+      },
+      "6": {
+        "precision": 0.9433962264150944,
+        "recall": 1.0,
+        "f1": 0.970873786407767,
+        "support": 50
+      },
+      "7": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      }
+    },
+    "threshold": 0.9950015136477659,
+    "calls": 83,
+    "call_rate": 0.2075,
+    "cnn_to_qwen_corrected": 15,
+    "cnn_to_qwen_harmed": 0
+  },
+  "route_corrected": 164,
+  "route_harmed": 33,
+  "historical_comparators": [
+    "base_qwen",
+    "wr50_full_finetune"
+  ],
+  "note": "Base and full fine-tuned WR50 metrics are historical same-test comparators; serial latency is from the new CNN/VLM/route run."
 }

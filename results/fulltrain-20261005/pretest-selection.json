@@ -1,0 +1,128 @@
+{
+  "adapter_sha256": "1ca0eee0bee45813a3f1e2d78ca9d3f6346d8d85c8949e8b04a3f0a16737f4d6",
+  "selected_checkpoint": {
+    "accuracy": 0.99,
+    "candidate": "step_18000",
+    "checkpoint": "step_18000",
+    "confusion_8x9": [
+      [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        48,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0
+      ]
+    ],
+    "confusion_labels_columns": [
+      "basophil",
+      "eosinophil",
+      "erythroblast",
+      "immature_granulocytes",
+      "lymphocyte",
+      "monocyte",
+      "neutrophil",
+      "platelet",
+      "__invalid__"
+    ],
+    "global_step": 18000,
+    "invalid": 0,
+    "macro_f1": 0.9899482295168293,
+    "n": 400,
+    "per_class_f1": [
+      0.9900990099009901,
+      1.0,
+      0.9795918367346939,
+      0.9696969696969697,
+      0.9900990099009901,
+      1.0,
+      0.9900990099009901,
+      1.0
+    ],
+    "source": "from_scratch_full_data"
+  },
+  "selection": "Highest dev macro-F1, dev accuracy, earlier step; frozen before new test inference.",
+  "test_history": "Official test has prior historical model evaluations; this is a follow-up experiment.",
+  "test_manifest_sha256": "e43cf8e9408572dcd13dbce9a0fe9cd463f9e78854c3bbe9a67b8a3fadc016fe",
+  "train_run": "model"
+}
