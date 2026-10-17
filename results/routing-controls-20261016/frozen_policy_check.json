@@ -1,0 +1,64 @@
+{
+  "main": {
+    "score": "max_probability",
+    "threshold": 0.9950015136477659,
+    "budget_upper_bound": 0.3,
+    "calls": 83,
+    "call_rate": 0.2075,
+    "accuracy": 0.985,
+    "macro_f1": 0.984889656398983
+  },
+  "all_thresholds": [
+    {
+      "score": "max_probability",
+      "threshold": 0.8881242481602354,
+      "budget_upper_bound": 0.1
+    },
+    {
+      "score": "max_probability",
+      "threshold": 0.9890136980901866,
+      "budget_upper_bound": 0.2
+    },
+    {
+      "score": "max_probability",
+      "threshold": 0.9950015136477659,
+      "budget_upper_bound": 0.3
+    },
+    {
+      "score": "max_probability",
+      "threshold": 0.9999093964603363,
+      "budget_upper_bound": 0.5
+    },
+    {
+      "score": "max_probability",
+      "threshold": 0.9999985513107621,
+      "budget_upper_bound": 1.0
+    },
+    {
+      "score": "top1_top2_margin",
+      "threshold": 0.7967923646245337,
+      "budget_upper_bound": 0.1
+    },
+    {
+      "score": "top1_top2_margin",
+      "threshold": 0.9901142728717498,
+      "budget_upper_bound": 0.2
+    },
+    {
+      "score": "top1_top2_margin",
+      "threshold": 0.9921884398012819,
+      "budget_upper_bound": 0.3
+    },
+    {
+      "score": "top1_top2_margin",
+      "threshold": 0.9998233811645545,
+      "budget_upper_bound": 0.5
+    },
+    {
+      "score": "top1_top2_margin",
+      "threshold": 0.9999970362457362,
+      "budget_upper_bound": 1.0
+    }
+  ],
+  "development_reproduced_exactly": true
+}

@@ -1,0 +1,33 @@
+{
+  "version": "blood-routing-controls-v1",
+  "date": "2026-10-16",
+  "status": "frozen_before_new_control_evaluation",
+  "question": "At the frozen policy's actual VLM call count, does CNN low-confidence selection outperform uniformly random selection?",
+  "design": "Paired offline replay of archived full-test predictions; no training or new model inference",
+  "policy_selection": "Reuse archived development-only max-probability policy. Reproduce development selection, do not retune on test.",
+  "primary_arms": [
+    "CNN only",
+    "VLM on all images",
+    "Archived development-frozen low-confidence route",
+    "Uniform random subset without replacement at exactly the archived route call count, 10000 replicates",
+    "Highest CNN confidence first at the same count, diagnostic negative control"
+  ],
+  "secondary": "Replay all ten archived development-selected probability/margin thresholds using batch-1 CNN scores. Keep every policy; do not select a new winner on test.",
+  "metrics": [
+    "accuracy",
+    "macro_f1",
+    "VLM call count and rate",
+    "CNN mistakes corrected",
+    "CNN correct predictions harmed",
+    "classwise recall"
+  ],
+  "random_seed": 20261016,
+  "random_replicates": 10000,
+  "paired_bootstrap_seed": 20261017,
+  "paired_bootstrap_replicates": 5000,
+  "intervals": "Random-subset 2.5/97.5 percentiles describe selection variation on this fixed test set. Paired image bootstrap describes route-minus-CNN and route-minus-full-VLM deltas with the existing policy fixed. Neither measures training seed or patient variability.",
+  "latency": "No new latency measurements. Do not convert call count into claimed measured timing.",
+  "data_scope": "Historical 3421-image BloodMNIST test with known duplicate limitations; not new blind or patient-independent testing. CNN is the original frozen WR50 feature extractor plus linear classifier, not the stronger fully fine-tuned CNN.",
+  "tie_break": "Confidence-ranked negative control uses descending confidence, then ascending source_id; no labels used to choose mask.",
+  "source_archive_note": "Original internal paths are provenance only; public replay inputs are per_image_replay.jsonl and results/fulltrain-20261005/."
+}

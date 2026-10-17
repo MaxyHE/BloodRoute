@@ -1,0 +1,267 @@
+{
+  "counts": {
+    "train": 11959,
+    "dev": 400,
+    "test": 3421
+  },
+  "id_overlap": {
+    "train__dev": [],
+    "train__test": [],
+    "dev__test": []
+  },
+  "exact_cross_split_groups": [
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:01018",
+        "image": "images/train/train_01018.png",
+        "label": 1,
+        "pixel_sha256": "467a27f7f38f51805c3687b7ad0cd8fb74a64e39a1c0bd5bc950700cd4606e86",
+        "phash64": "e8b093cc8ab35dca"
+      },
+      {
+        "split": "test",
+        "source_id": "bloodmnist:test:03126",
+        "image": "images/test/test_03126.png",
+        "label": 6,
+        "pixel_sha256": "467a27f7f38f51805c3687b7ad0cd8fb74a64e39a1c0bd5bc950700cd4606e86",
+        "phash64": "e8b093cc8ab35dca"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:04375",
+        "image": "images/train/train_04375.png",
+        "label": 0,
+        "pixel_sha256": "9813251a2f9517fa59ce1709b600b695563310d79f0be7e975cde54c8bf98087",
+        "phash64": "e8c39715def86103"
+      },
+      {
+        "split": "test",
+        "source_id": "bloodmnist:test:03218",
+        "image": "images/test/test_03218.png",
+        "label": 0,
+        "pixel_sha256": "9813251a2f9517fa59ce1709b600b695563310d79f0be7e975cde54c8bf98087",
+        "phash64": "e8c39715def86103"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:04995",
+        "image": "images/train/train_04995.png",
+        "label": 0,
+        "pixel_sha256": "8ad8404b3676e1a87978cbf04e85a9c99bba58b57e9ff6ba8ffe2e855d1f3866",
+        "phash64": "e1e3d3689e30c9d1"
+      },
+      {
+        "split": "test",
+        "source_id": "bloodmnist:test:02966",
+        "image": "images/test/test_02966.png",
+        "label": 0,
+        "pixel_sha256": "8ad8404b3676e1a87978cbf04e85a9c99bba58b57e9ff6ba8ffe2e855d1f3866",
+        "phash64": "e1e3d3689e30c9d1"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:07646",
+        "image": "images/train/train_07646.png",
+        "label": 1,
+        "pixel_sha256": "5f2e3b114aeaa63eb48a840319293a378bd42217ce5771c9b39633e37c01560a",
+        "phash64": "f8c283dc1b60fc35"
+      },
+      {
+        "split": "test",
+        "source_id": "bloodmnist:test:01323",
+        "image": "images/test/test_01323.png",
+        "label": 1,
+        "pixel_sha256": "5f2e3b114aeaa63eb48a840319293a378bd42217ce5771c9b39633e37c01560a",
+        "phash64": "f8c283dc1b60fc35"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:08530",
+        "image": "images/train/train_08530.png",
+        "label": 1,
+        "pixel_sha256": "3263ebb47d06af68e353a9a16fc05dec3c4dca61571413c69e870e0ba910f435",
+        "phash64": "fec0859e8f4ac8e1"
+      },
+      {
+        "split": "dev",
+        "source_id": "bloodmnist:val:00956",
+        "image": "images/val/val_00956.png",
+        "label": 1,
+        "pixel_sha256": "3263ebb47d06af68e353a9a16fc05dec3c4dca61571413c69e870e0ba910f435",
+        "phash64": "fec0859e8f4ac8e1"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "source_id": "bloodmnist:train:10505",
+        "image": "images/train/train_10505.png",
+        "label": 0,
+        "pixel_sha256": "bef9b4d12b896713c4549436b466e578bbe85bbc2d8a8a4a23434c76ecfb933c",
+        "phash64": "b479cb920d8f193c"
+      },
+      {
+        "split": "test",
+        "source_id": "bloodmnist:test:02664",
+        "image": "images/test/test_02664.png",
+        "label": 0,
+        "pixel_sha256": "bef9b4d12b896713c4549436b466e578bbe85bbc2d8a8a4a23434c76ecfb933c",
+        "phash64": "b479cb920d8f193c"
+      }
+    ]
+  ],
+  "exact_cross_split_group_count": 6,
+  "near_cross_split_candidate_counts": {
+    "train__dev": 1,
+    "train__test": 6
+  },
+  "near_examples": [
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:08530",
+        "image": "images/train/train_08530.png",
+        "label": 1,
+        "pixel_sha256": "3263ebb47d06af68e353a9a16fc05dec3c4dca61571413c69e870e0ba910f435",
+        "phash64": "fec0859e8f4ac8e1"
+      },
+      "b": {
+        "split": "dev",
+        "source_id": "bloodmnist:val:00956",
+        "image": "images/val/val_00956.png",
+        "label": 1,
+        "pixel_sha256": "3263ebb47d06af68e353a9a16fc05dec3c4dca61571413c69e870e0ba910f435",
+        "phash64": "fec0859e8f4ac8e1"
+      }
+    },
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:07646",
+        "image": "images/train/train_07646.png",
+        "label": 1,
+        "pixel_sha256": "5f2e3b114aeaa63eb48a840319293a378bd42217ce5771c9b39633e37c01560a",
+        "phash64": "f8c283dc1b60fc35"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:01323",
+        "image": "images/test/test_01323.png",
+        "label": 1,
+        "pixel_sha256": "5f2e3b114aeaa63eb48a840319293a378bd42217ce5771c9b39633e37c01560a",
+        "phash64": "f8c283dc1b60fc35"
+      }
+    },
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:10505",
+        "image": "images/train/train_10505.png",
+        "label": 0,
+        "pixel_sha256": "bef9b4d12b896713c4549436b466e578bbe85bbc2d8a8a4a23434c76ecfb933c",
+        "phash64": "b479cb920d8f193c"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:02664",
+        "image": "images/test/test_02664.png",
+        "label": 0,
+        "pixel_sha256": "bef9b4d12b896713c4549436b466e578bbe85bbc2d8a8a4a23434c76ecfb933c",
+        "phash64": "b479cb920d8f193c"
+      }
+    },
+    {
+      "distance": 4,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:06450",
+        "image": "images/train/train_06450.png",
+        "label": 5,
+        "pixel_sha256": "c1612f7acae215950b7c70eb461a2f77d0083e2d6405b3ff813e9d3aa2351205",
+        "phash64": "e878c778da616836"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:02773",
+        "image": "images/test/test_02773.png",
+        "label": 5,
+        "pixel_sha256": "7a582df6d2a1b02d84efa5b40b2d4eb4fe76ab4bbba336fe918739a52b8fcbdd",
+        "phash64": "e8788778da636934"
+      }
+    },
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:04995",
+        "image": "images/train/train_04995.png",
+        "label": 0,
+        "pixel_sha256": "8ad8404b3676e1a87978cbf04e85a9c99bba58b57e9ff6ba8ffe2e855d1f3866",
+        "phash64": "e1e3d3689e30c9d1"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:02966",
+        "image": "images/test/test_02966.png",
+        "label": 0,
+        "pixel_sha256": "8ad8404b3676e1a87978cbf04e85a9c99bba58b57e9ff6ba8ffe2e855d1f3866",
+        "phash64": "e1e3d3689e30c9d1"
+      }
+    },
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:01018",
+        "image": "images/train/train_01018.png",
+        "label": 1,
+        "pixel_sha256": "467a27f7f38f51805c3687b7ad0cd8fb74a64e39a1c0bd5bc950700cd4606e86",
+        "phash64": "e8b093cc8ab35dca"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:03126",
+        "image": "images/test/test_03126.png",
+        "label": 6,
+        "pixel_sha256": "467a27f7f38f51805c3687b7ad0cd8fb74a64e39a1c0bd5bc950700cd4606e86",
+        "phash64": "e8b093cc8ab35dca"
+      }
+    },
+    {
+      "distance": 0,
+      "a": {
+        "split": "train",
+        "source_id": "bloodmnist:train:04375",
+        "image": "images/train/train_04375.png",
+        "label": 0,
+        "pixel_sha256": "9813251a2f9517fa59ce1709b600b695563310d79f0be7e975cde54c8bf98087",
+        "phash64": "e8c39715def86103"
+      },
+      "b": {
+        "split": "test",
+        "source_id": "bloodmnist:test:03218",
+        "image": "images/test/test_03218.png",
+        "label": 0,
+        "pixel_sha256": "9813251a2f9517fa59ce1709b600b695563310d79f0be7e975cde54c8bf98087",
+        "phash64": "e8c39715def86103"
+      }
+    }
+  ],
+  "near_method": "64bit normalized DCT pHash, median excludes DC, Hamming<=4; candidates need visual review",
+  "patient_ids_available": false,
+  "prompt_count": 1,
+  "input_policy": "Only image pixels and canonical question reach model; no source_id, filename, answer or gt metadata",
+  "interpretation": "No exact duplicate does not prove patient independence or absence of crop/background shortcuts"
+}

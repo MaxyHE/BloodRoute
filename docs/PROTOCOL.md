@@ -6,6 +6,10 @@
 
 参考代码和命令见[完整训练集复现](FULLTRAIN_REPRODUCE.md)，新结果与历史对照见[实验记录](EXPERIMENTS.md)。下方描述历史 2,000→4,000 图热启动、独立 rank 和旧路由协议，不作为最新模型的训练设置。
 
+## 当前适配器的追加诊断
+
+[图像依赖与数据审计](VALIDATION_20261014.md)固定step_18000、800张均衡历史测试图和723张VisA图；正常／替换为实际推理，空白与纯文本各每模型只推理一次。固定预测上的[同预算路由对照](ROUTING_CONTROLS_20261016.md)使用801次调用、10000次随机选择与5000次配对图像bootstrap，不重选测试阈值，不新增速度结果。结果与完整测试、历史rank分别解释。
+
 ## 数据
 
 使用 MedMNIST+ 的 BloodMNIST 224 文件。官方 train/val/test 分别为 11,959/1,712/3,421 张。该 224 版本来自原始图像的处理，不是将旧 28×28 文件简单放大。
@@ -36,7 +40,7 @@ Which blood cell type is shown? Answer with exactly one of: basophil; eosinophil
 
 rank=2/4/8 的容量对照从同一 base 新建适配器，alpha 分别为 4/8/16，固定 alpha/r=2。三组保持同样的语言侧作用层、dropout、数据、seed 与生成设置，完整训练 8,000 步；前 4,000 步 lr=2e-4，后 4,000 步 lr=5e-5，学习率切换时保留 AdamW 状态。
 
-每 1,000 步在同一 400 图开发集评估，按 macro-F1、accuracy、较早 step 选择 checkpoint。本轮不读取测试集；它是独立的容量实验，主实验仍采用上一节所述热启动适配器。完整记录见 [Rank 消融](RANK_ABLATION.md)。
+每 1,000 步在同一 400 图开发集评估，按 macro-F1、accuracy、较早 step 选择 checkpoint。本轮不读取测试集；它是独立的容量实验，这组rank结果不替代后续完整训练模型的主测试结果。完整记录见 [Rank 消融](RANK_ABLATION.md)。
 
 ## VLM 评估
 

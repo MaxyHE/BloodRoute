@@ -1,0 +1,11 @@
+{
+  "export_date": "2026-10-17",
+  "description": "Curated public attachments; local absolute paths removed from metadata; predictions and metric values unchanged. SHA256 applies to exported files.",
+  "files_sha256": {
+    "frozen_policy_check.json": "9a9fadefc2283d7a6dcec4716e4c0aca10dfd187f3912d6a790d86df89346d4b",
+    "per_image_replay.jsonl": "1d0295cd2d9cdf854a28979ebacd065f7f2d3de3a758235435e712fdf91715b8",
+    "protocol.json": "505406a1404e2c823af21e53ec1b3aeda67e5a38e02014698a2b2b9ad83d45b1",
+    "random_replicates.csv": "0e1f7f691b3ccbf52b59c51f117d3044537f8855702632e47d554fb4d249ea20",
+    "results.json": "54949606afb3763e17b0eed0403f85d2d1d913d89b86589824e8fba5d9ef9ba8"
+  }
+}

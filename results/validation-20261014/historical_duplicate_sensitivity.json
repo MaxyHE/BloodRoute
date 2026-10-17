@@ -1,0 +1,1442 @@
+{
+  "lora": {
+    "historical_full": {
+      "n": 3421,
+      "accuracy": 0.9719380298158433,
+      "macro_f1": 0.970117533458081,
+      "balanced_accuracy": 0.96846403552716,
+      "per_class_recall": {
+        "basophil": 0.9467213114754098,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9678456591639871,
+        "immature_granulocytes": 0.9585492227979274,
+        "lymphocyte": 0.9670781893004116,
+        "monocyte": 0.9471830985915493,
+        "neutrophil": 0.9624624624624625,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.9705882352941176,
+        "eosinophil": 0.9904761904761905,
+        "erythroblast": 0.9868852459016394,
+        "immature_granulocytes": 0.9265442404006677,
+        "lymphocyte": 0.9631147540983607,
+        "monocyte": 0.9607142857142857,
+        "neutrophil": 0.9771341463414634,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          231,
+          0,
+          0,
+          10,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          624,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          301,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          2,
+          555,
+          0,
+          7,
+          12,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          235,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          5,
+          269,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          1,
+          16,
+          1,
+          1,
+          641,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 599,
+        "basophil": 238,
+        "eosinophil": 630,
+        "monocyte": 280,
+        "neutrophil": 656,
+        "erythroblast": 305,
+        "lymphocyte": 244,
+        "platelet": 469
+      }
+    },
+    "exclude_exact_duplicates": {
+      "n": 3416,
+      "accuracy": 0.9721896955503513,
+      "macro_f1": 0.9702424026031575,
+      "balanced_accuracy": 0.9685620470002256,
+      "per_class_recall": {
+        "basophil": 0.946058091286307,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9678456591639871,
+        "immature_granulocytes": 0.9585492227979274,
+        "lymphocyte": 0.9670781893004116,
+        "monocyte": 0.9471830985915493,
+        "neutrophil": 0.9639097744360903,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.9702127659574468,
+        "eosinophil": 0.9920382165605095,
+        "erythroblast": 0.9868852459016394,
+        "immature_granulocytes": 0.9265442404006677,
+        "lymphocyte": 0.9631147540983607,
+        "monocyte": 0.9607142857142857,
+        "neutrophil": 0.9771341463414634,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          228,
+          0,
+          0,
+          10,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          623,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          301,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          2,
+          555,
+          0,
+          7,
+          12,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          235,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          5,
+          269,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          16,
+          1,
+          1,
+          641,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 599,
+        "basophil": 235,
+        "eosinophil": 628,
+        "monocyte": 280,
+        "neutrophil": 656,
+        "erythroblast": 305,
+        "lymphocyte": 244,
+        "platelet": 469
+      }
+    },
+    "exclude_all_phash_candidates_sensitivity": {
+      "n": 3415,
+      "accuracy": 0.9724743777452416,
+      "macro_f1": 0.9707024156355915,
+      "balanced_accuracy": 0.9689804140932431,
+      "per_class_recall": {
+        "basophil": 0.946058091286307,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9678456591639871,
+        "immature_granulocytes": 0.9585492227979274,
+        "lymphocyte": 0.9670781893004116,
+        "monocyte": 0.950530035335689,
+        "neutrophil": 0.9639097744360903,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.9702127659574468,
+        "eosinophil": 0.9920382165605095,
+        "erythroblast": 0.9868852459016394,
+        "immature_granulocytes": 0.9265442404006677,
+        "lymphocyte": 0.9670781893004116,
+        "monocyte": 0.9607142857142857,
+        "neutrophil": 0.9771341463414634,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          228,
+          0,
+          0,
+          10,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          623,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          301,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          2,
+          555,
+          0,
+          7,
+          12,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          235,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          4,
+          269,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          16,
+          1,
+          1,
+          641,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 599,
+        "basophil": 235,
+        "eosinophil": 628,
+        "monocyte": 280,
+        "neutrophil": 656,
+        "erythroblast": 305,
+        "lymphocyte": 243,
+        "platelet": 469
+      }
+    },
+    "excluded_rows": [
+      {
+        "source_id": "bloodmnist:test:01323",
+        "label": 1,
+        "prediction": 1,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 509.5556383021176,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02664",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 457.5138599611819,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02773",
+        "label": 5,
+        "prediction": 4,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 517.741035670042,
+        "parsed": "lymphocyte"
+      },
+      {
+        "source_id": "bloodmnist:test:02966",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 472.1256126649678,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03126",
+        "label": 6,
+        "prediction": 1,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 521.7207339592278,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03218",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": null,
+        "confidence": null,
+        "called": true,
+        "e2e_ms": 471.9112738966942,
+        "parsed": "basophil"
+      }
+    ],
+    "source_sha256": "cf5e90c3cef2391a4f663ea27ba9be238015f97cf84a6c1c5ad1179fe3748ed4",
+    "note": "Recompute archived actual predictions only, no new GPU inference or model selection."
+  },
+  "frozen_cnn": {
+    "historical_full": {
+      "n": 3421,
+      "accuracy": 0.9365682548962292,
+      "macro_f1": 0.9324544600412055,
+      "balanced_accuracy": 0.936758227819681,
+      "per_class_recall": {
+        "basophil": 0.9426229508196722,
+        "eosinophil": 0.967948717948718,
+        "erythroblast": 0.9485530546623794,
+        "immature_granulocytes": 0.8566493955094991,
+        "lymphocyte": 0.934156378600823,
+        "monocyte": 0.9084507042253521,
+        "neutrophil": 0.93993993993994,
+        "platelet": 0.9957446808510638
+      },
+      "per_class_precision": {
+        "basophil": 0.8949416342412452,
+        "eosinophil": 0.9741935483870968,
+        "erythroblast": 0.9394904458598726,
+        "immature_granulocytes": 0.8872987477638641,
+        "lymphocyte": 0.9227642276422764,
+        "monocyte": 0.8571428571428571,
+        "neutrophil": 0.9571865443425076,
+        "platelet": 0.9957446808510638
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          230,
+          0,
+          0,
+          7,
+          4,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          604,
+          2,
+          7,
+          1,
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          295,
+          8,
+          5,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          20,
+          6,
+          3,
+          496,
+          2,
+          32,
+          20,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          8,
+          1,
+          227,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          14,
+          6,
+          258,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          5,
+          26,
+          1,
+          3,
+          626,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          468,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 559,
+        "basophil": 257,
+        "eosinophil": 620,
+        "neutrophil": 654,
+        "erythroblast": 314,
+        "monocyte": 301,
+        "lymphocyte": 246,
+        "platelet": 470
+      }
+    },
+    "exclude_exact_duplicates": {
+      "n": 3416,
+      "accuracy": 0.936768149882904,
+      "macro_f1": 0.932512332931011,
+      "balanced_accuracy": 0.936839197783596,
+      "per_class_recall": {
+        "basophil": 0.941908713692946,
+        "eosinophil": 0.9678972712680578,
+        "erythroblast": 0.9485530546623794,
+        "immature_granulocytes": 0.8566493955094991,
+        "lymphocyte": 0.934156378600823,
+        "monocyte": 0.9084507042253521,
+        "neutrophil": 0.9413533834586466,
+        "platelet": 0.9957446808510638
+      },
+      "per_class_precision": {
+        "basophil": 0.8937007874015748,
+        "eosinophil": 0.9757281553398058,
+        "erythroblast": 0.9394904458598726,
+        "immature_granulocytes": 0.8872987477638641,
+        "lymphocyte": 0.9227642276422764,
+        "monocyte": 0.8571428571428571,
+        "neutrophil": 0.9571865443425076,
+        "platelet": 0.9957446808510638
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          227,
+          0,
+          0,
+          7,
+          4,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          603,
+          2,
+          7,
+          1,
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          295,
+          8,
+          5,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          20,
+          6,
+          3,
+          496,
+          2,
+          32,
+          20,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          8,
+          1,
+          227,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          14,
+          6,
+          258,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          26,
+          1,
+          3,
+          626,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          468,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 559,
+        "basophil": 254,
+        "eosinophil": 618,
+        "neutrophil": 654,
+        "erythroblast": 314,
+        "monocyte": 301,
+        "lymphocyte": 246,
+        "platelet": 470
+      }
+    },
+    "exclude_all_phash_candidates_sensitivity": {
+      "n": 3415,
+      "accuracy": 0.9367496339677892,
+      "macro_f1": 0.9324617545785459,
+      "balanced_accuracy": 0.9367987608154976,
+      "per_class_recall": {
+        "basophil": 0.941908713692946,
+        "eosinophil": 0.9678972712680578,
+        "erythroblast": 0.9485530546623794,
+        "immature_granulocytes": 0.8566493955094991,
+        "lymphocyte": 0.934156378600823,
+        "monocyte": 0.9081272084805654,
+        "neutrophil": 0.9413533834586466,
+        "platelet": 0.9957446808510638
+      },
+      "per_class_precision": {
+        "basophil": 0.8937007874015748,
+        "eosinophil": 0.9757281553398058,
+        "erythroblast": 0.9394904458598726,
+        "immature_granulocytes": 0.8872987477638641,
+        "lymphocyte": 0.9227642276422764,
+        "monocyte": 0.8566666666666667,
+        "neutrophil": 0.9571865443425076,
+        "platelet": 0.9957446808510638
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          227,
+          0,
+          0,
+          7,
+          4,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          603,
+          2,
+          7,
+          1,
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          295,
+          8,
+          5,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          20,
+          6,
+          3,
+          496,
+          2,
+          32,
+          20,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          8,
+          1,
+          227,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          14,
+          6,
+          257,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          26,
+          1,
+          3,
+          626,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          468,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 559,
+        "basophil": 254,
+        "eosinophil": 618,
+        "neutrophil": 654,
+        "erythroblast": 314,
+        "monocyte": 300,
+        "lymphocyte": 246,
+        "platelet": 470
+      }
+    },
+    "excluded_rows": [
+      {
+        "source_id": "bloodmnist:test:01323",
+        "label": 1,
+        "prediction": 1,
+        "cnn_prediction": 1,
+        "confidence": 0.9998247838574197,
+        "called": false,
+        "e2e_ms": 10.514745023101568,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02664",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.9999899477208202,
+        "called": false,
+        "e2e_ms": 9.593343827873468,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02773",
+        "label": 5,
+        "prediction": 5,
+        "cnn_prediction": 5,
+        "confidence": 0.844988809864658,
+        "called": false,
+        "e2e_ms": 9.028519969433546,
+        "parsed": "monocyte"
+      },
+      {
+        "source_id": "bloodmnist:test:02966",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.9959287002663227,
+        "called": false,
+        "e2e_ms": 9.480923879891634,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03126",
+        "label": 6,
+        "prediction": 1,
+        "cnn_prediction": 1,
+        "confidence": 0.9999977816730838,
+        "called": false,
+        "e2e_ms": 10.414446238428354,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03218",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.999999638688281,
+        "called": false,
+        "e2e_ms": 9.39996587112546,
+        "parsed": "basophil"
+      }
+    ],
+    "source_sha256": "328f1b44978f57cfacc217d38feb94e3758d96212dd44254e15f71cb62d81c6a",
+    "note": "Recompute archived actual predictions only, no new GPU inference or model selection."
+  },
+  "route": {
+    "historical_full": {
+      "n": 3421,
+      "accuracy": 0.9748611517100263,
+      "macro_f1": 0.9748881241975101,
+      "balanced_accuracy": 0.9739686297426491,
+      "per_class_recall": {
+        "basophil": 0.9713114754098361,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9710610932475884,
+        "immature_granulocytes": 0.9464594127806563,
+        "lymphocyte": 0.9753086419753086,
+        "monocyte": 0.9612676056338029,
+        "neutrophil": 0.9684684684684685,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.983402489626556,
+        "eosinophil": 0.9952153110047847,
+        "erythroblast": 0.9869281045751634,
+        "immature_granulocytes": 0.9367521367521368,
+        "lymphocyte": 0.9713114754098361,
+        "monocyte": 0.9646643109540636,
+        "neutrophil": 0.9684684684684685,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          237,
+          0,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          624,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          302,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          548,
+          0,
+          8,
+          18,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          2,
+          237,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          3,
+          273,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          16,
+          1,
+          1,
+          645,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 585,
+        "basophil": 241,
+        "eosinophil": 627,
+        "monocyte": 283,
+        "neutrophil": 666,
+        "erythroblast": 306,
+        "lymphocyte": 244,
+        "platelet": 469
+      }
+    },
+    "exclude_exact_duplicates": {
+      "n": 3416,
+      "accuracy": 0.9751170960187353,
+      "macro_f1": 0.9750430048354273,
+      "balanced_accuracy": 0.9741060328674296,
+      "per_class_recall": {
+        "basophil": 0.970954356846473,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9710610932475884,
+        "immature_granulocytes": 0.9464594127806563,
+        "lymphocyte": 0.9753086419753086,
+        "monocyte": 0.9612676056338029,
+        "neutrophil": 0.9699248120300752,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.9831932773109243,
+        "eosinophil": 0.9968,
+        "erythroblast": 0.9869281045751634,
+        "immature_granulocytes": 0.9367521367521368,
+        "lymphocyte": 0.9713114754098361,
+        "monocyte": 0.9646643109540636,
+        "neutrophil": 0.9684684684684685,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          234,
+          0,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          623,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          302,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          548,
+          0,
+          8,
+          18,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          2,
+          237,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          3,
+          273,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          16,
+          1,
+          1,
+          645,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 585,
+        "basophil": 238,
+        "eosinophil": 625,
+        "monocyte": 283,
+        "neutrophil": 666,
+        "erythroblast": 306,
+        "lymphocyte": 244,
+        "platelet": 469
+      }
+    },
+    "exclude_all_phash_candidates_sensitivity": {
+      "n": 3415,
+      "accuracy": 0.975402635431918,
+      "macro_f1": 0.9755060092280456,
+      "balanced_accuracy": 0.9745306210324621,
+      "per_class_recall": {
+        "basophil": 0.970954356846473,
+        "eosinophil": 1.0,
+        "erythroblast": 0.9710610932475884,
+        "immature_granulocytes": 0.9464594127806563,
+        "lymphocyte": 0.9753086419753086,
+        "monocyte": 0.9646643109540636,
+        "neutrophil": 0.9699248120300752,
+        "platelet": 0.997872340425532
+      },
+      "per_class_precision": {
+        "basophil": 0.9831932773109243,
+        "eosinophil": 0.9968,
+        "erythroblast": 0.9869281045751634,
+        "immature_granulocytes": 0.9367521367521368,
+        "lymphocyte": 0.9753086419753086,
+        "monocyte": 0.9646643109540636,
+        "neutrophil": 0.9684684684684685,
+        "platelet": 1.0
+      },
+      "invalid": 0,
+      "confusion": [
+        [
+          234,
+          0,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          623,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          302,
+          6,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          548,
+          0,
+          8,
+          18,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          2,
+          237,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          2,
+          273,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          16,
+          1,
+          1,
+          645,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          469,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "basophil",
+        "eosinophil",
+        "erythroblast",
+        "immature_granulocytes",
+        "lymphocyte",
+        "monocyte",
+        "neutrophil",
+        "platelet",
+        "__invalid__"
+      ],
+      "prediction_counts": {
+        "immature_granulocytes": 585,
+        "basophil": 238,
+        "eosinophil": 625,
+        "monocyte": 283,
+        "neutrophil": 666,
+        "erythroblast": 306,
+        "lymphocyte": 243,
+        "platelet": 469
+      }
+    },
+    "excluded_rows": [
+      {
+        "source_id": "bloodmnist:test:01323",
+        "label": 1,
+        "prediction": 1,
+        "cnn_prediction": 1,
+        "confidence": 0.9998247838574197,
+        "called": false,
+        "e2e_ms": 9.9421301856637,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02664",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.9999899477208202,
+        "called": false,
+        "e2e_ms": 8.496604394167662,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:02773",
+        "label": 5,
+        "prediction": 4,
+        "cnn_prediction": 5,
+        "confidence": 0.844988809864658,
+        "called": true,
+        "e2e_ms": 503.2067899592221,
+        "parsed": "lymphocyte"
+      },
+      {
+        "source_id": "bloodmnist:test:02966",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.9959287002663227,
+        "called": false,
+        "e2e_ms": 10.366136208176613,
+        "parsed": "basophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03126",
+        "label": 6,
+        "prediction": 1,
+        "cnn_prediction": 1,
+        "confidence": 0.9999977816730838,
+        "called": false,
+        "e2e_ms": 9.239428211003542,
+        "parsed": "eosinophil"
+      },
+      {
+        "source_id": "bloodmnist:test:03218",
+        "label": 0,
+        "prediction": 0,
+        "cnn_prediction": 0,
+        "confidence": 0.999999638688281,
+        "called": false,
+        "e2e_ms": 9.754772298038006,
+        "parsed": "basophil"
+      }
+    ],
+    "source_sha256": "d673d5e9d1524608e673c5238c51c2d5871923995c1bdde23401608fdae1882e",
+    "note": "Recompute archived actual predictions only, no new GPU inference or model selection."
+  }
+}

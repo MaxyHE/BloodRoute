@@ -1,0 +1,22 @@
+{
+  "export_date": "2026-10-17",
+  "description": "Curated public attachments; local absolute paths removed from metadata; predictions and metric values unchanged. SHA256 applies to exported files.",
+  "files_sha256": {
+    "PROTOCOL.md": "ba1b6ad4b94a877370b1f26d0014cb7ba8644df4ae990946a569e7647c16ccb7",
+    "base/blank.jsonl": "7b23603238ede4fcfeddee742a9081224b6d53817845d6b268818ab82364aa45",
+    "base/normal.jsonl": "1e0a26534eac4924cda83abf3f99a5a7d2df6e8f998f85a721345f6c70fee6c8",
+    "base/run_metadata.json": "d5a7caeec6b3fe6e3f6f9aa68bcc3f571b5e01aca1328cb6cbdc2830cece1cf6",
+    "base/swapped.jsonl": "f9b51e3625e61936a1d51b782ce4f528e12aef363e2307082cd711f41aac5708",
+    "base/text_only.jsonl": "f51d8a6ba59c548360406af9e21653f64c1fa1ccdc2a0f54518fbda7eb98c664",
+    "base/visa_predictions.jsonl": "dd751f95c411f28ea74a2500e3b4a9ffd1b126c3e4669da497b35fb7c3999057",
+    "data_audit.json": "26601f83ef675db69bb200ffc6438933aec7d929f81bf7f27ead47fdc65804e8",
+    "historical_duplicate_sensitivity.json": "313a9cbd3a9f96a6d0caa81d2b16635bb4a8a680d90a5b23e14a2d08006341d4",
+    "lora/blank.jsonl": "5fc77ee7d1eba79af19a5c0f22b97ba50e266efdc1cc9afabb0c07681bde6a8a",
+    "lora/normal.jsonl": "643304e709f664b0a72fd92d765a7da4518397f6dabca9d771d96028c020f34b",
+    "lora/run_metadata.json": "3ac2064db362cd2ed182d13abc4160299f7bf7af1bcfdb7c287fa654b65b9259",
+    "lora/swapped.jsonl": "11708384c6bbc411a23034303733b0bbdd31565210a9f1df27a7ee9dc10851c9",
+    "lora/text_only.jsonl": "f51d8a6ba59c548360406af9e21653f64c1fa1ccdc2a0f54518fbda7eb98c664",
+    "lora/visa_predictions.jsonl": "29e947a7d70434112a5dc35e0e147c41bbc415021833acf5ab66b8f70e3f6fdf",
+    "results.json": "ac5dc4bb882ac050627a59587a6d723c577850734da12d6895ca14f979aa7eb0"
+  }
+}
